@@ -50,7 +50,6 @@ from wsgiref.handlers import format_date_time
 def default_template_data():
     data = {
         "title": settings.SITE_NAME,
-        "report_url": settings.REPORT_URL,
         "twitter_handle": settings.TWITTER_HANDLE,
         }
 

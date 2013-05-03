@@ -4,7 +4,6 @@ html, body{
 
 body{
   font:12px arial,helvetica,verdana,sans-serif;
-  background: rgb(247, 247, 247);
 }
 
 a {
@@ -57,7 +56,7 @@ h3.date-range {color: #999; margin-top: 20px}
 #header h1 span {font-weight: normal;}
 #header h2 {margin: 15px 0; float: left; line-height: 67px;}
 #header .button-container { float: right; margin-top: 20px;}
-#logo { height: 40px; width: 54px; float: left; margin: 15px 0;}
+#logo { float: left; margin: 15px 0;}
 
 #status { height: 200px; }
 #status h2 { font-size: 60px; color: #FFF; text-align: center; padding-top: 65px;text-shadow: 2px 2px 0px #000;}
@@ -299,15 +298,6 @@ td.status a .information {position: absolute; top: 0px; left: 1px; z-index: 500;
 
 #documentation blockquote p {
     margin: 0;
-}
-
-#powered {
-    font-family: courier, monospace;
-    font-size: 10px;
-}
-
-#powered img {
-    width: 27px;
 }
 
 ul.admin .button {
