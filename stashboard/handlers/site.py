@@ -45,6 +45,7 @@ from models import List, Status, Service, Event, Profile
 import xml.etree.ElementTree as et
 from utils import authorized
 from wsgiref.handlers import format_date_time
+import stats
 
 
 def default_template_data():
@@ -58,6 +59,8 @@ def default_template_data():
         data["user"] = user
         data["logout_url"] = users.create_logout_url("/")
         data["admin"] = users.is_current_user_admin()
+
+    data = dict(data.items() + stats.stats.items())
 
     return data
 
