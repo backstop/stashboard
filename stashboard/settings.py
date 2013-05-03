@@ -4,7 +4,7 @@ DEBUG = False
 
 SITE_NAME = "System Status"
 SITE_AUTHOR = "Colonel Mustache"
-SITE_URL = "http://backstopstatus.appspot.com"
+SITE_URL = "https://backstopstatus.appspot.com"
 
 # Twitter update settings
 TWITTER_CONSUMER_KEY = ''
