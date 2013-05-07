@@ -4,6 +4,10 @@
 
 Stashboard was written by Twilio to provide status information on our phone, SMS, and Communication APIs. We open sourced the code to provide a generic status page designed to be customized by any hosted services company to provide customers up-to-date status information. The code can be downloaded, customized with your logo, and run on any Google App Engine account.
 
+## Backstop-specific stuff
+
+Is on [the wiki](https://wiki/wiki/Backstop_System_Status).
+
 ## Installation
 
 1. Download and install the [App Engine SDK for Python][appengine]
