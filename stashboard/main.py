@@ -37,6 +37,7 @@ from google.appengine.ext.webapp.util import run_wsgi_app
 from handlers import site, api, admin
 
 API = [
+    (r'/api/(.+)/uptime', api.Uptime),
     (r'/api/(.+)/levels', api.LevelListHandler), #DEPRECATED
     (r'/api/(.+)/services/(.+)/events/current', api.CurrentEventHandler),
     (r'/api/(.+)/services/(.+)/events', api.EventsListHandler),

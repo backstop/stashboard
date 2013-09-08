@@ -51,7 +51,7 @@ from utils import authorized
 from utils import slugify
 from models import List, Status, Event, Service, Image
 from wsgiref.handlers import format_date_time
-
+import stats
 
 def invalidate_cache():
     all_pages = memcache.get("__all_pages__")
@@ -632,6 +632,15 @@ class LevelListHandler(restful.Controller):
             return
 
         self.json({"levels": ["NORMAL", "WARNING", "ERROR", "CRITICAL"]})
+
+class Uptime(restful.Controller):
+
+    def get(self, version):
+        if not self.valid_version(version):
+            self.error(404, "API Version %s not supported" % version)
+            return
+
+        self.json({"uptime": stats.stats})
 
 
 class ImagesListHandler(restful.Controller):
