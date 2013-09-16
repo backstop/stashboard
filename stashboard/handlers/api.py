@@ -640,6 +640,7 @@ class Uptime(restful.Controller):
             self.error(404, "API Version %s not supported" % version)
             return
 
+        self.response.headers.add_header("Access-Control-Allow-Origin", "*")
         self.json({"uptime": stats.stats})
 
 
