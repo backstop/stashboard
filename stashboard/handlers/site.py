@@ -60,7 +60,10 @@ def default_template_data():
         data["logout_url"] = users.create_logout_url("/")
         data["admin"] = users.is_current_user_admin()
 
-    data = dict(data.items() + stats.stats.items())
+    stop_date = datetime.datetime.strptime(stats.stats['stop_date'], '%Y-%m-%d').date()
+    data['as_of'] = stop_date
+    for k, uptime in stats.stats['uptimes'].items():
+        data[k] = '{:.2%}'.format(uptime)
 
     return data
 

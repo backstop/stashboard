@@ -1,1 +1,7 @@
-stats = {'fb_all': '99.88', 'ib_all': '99.90', 'as_of': '2013-11-14', 'fb_us': '99.95', 'ib_us': '99.95'}
+import json
+
+def load_stats():
+    with open('data/stats.json') as fp:
+        return json.load(fp)
+
+stats = load_stats()
