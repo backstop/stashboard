@@ -1,7 +1,8 @@
 import json
+import urllib2
 
 def load_stats():
-    with open('data/stats.json') as fp:
-        return json.load(fp)
+    file = urllib2.urlopen("https://raw.githubusercontent.com/backstop/stashboard/master/data/stats.json")
+    return json.load(file)
 
 stats = load_stats()
